@@ -36,8 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles'
-    'routinebuilder',
+    'django.contrib.staticfiles',
+    'routine_builder',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'exerlog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'exerlog_db',
+        'USER': 'postgres',
+        'PASSWORD': '',
+        'HOST': 'localhost', 
+        'PORT': '5432',
     }
 }
 

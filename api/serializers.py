@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from routine_builder.models import Exercises
 
-class ExercisesSerializer(serializers.HyperlinkedModelSerializer):
+class ExercisesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Exercises
-        fields = ('name', 'body_part')
+        fields = '__all__'

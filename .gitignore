@@ -1,4 +1,3 @@
-exerlog/__pycache__/settings.cpython-311.pyc
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -162,3 +161,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+exerlog/settings.py
+exerlog/__pycache__/settings.cpython-311.pyc
+routine_builder/admin.py
+requirements.txt

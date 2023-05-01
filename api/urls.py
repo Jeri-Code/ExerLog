@@ -5,6 +5,7 @@ from users.views import RegisterAPI
 from users.views import LoginAPI
 from knox import views as knox_views
 from rest_framework.routers import DefaultRouter
+from django .views.generic import TemplateView
 
 class RouterWithExtraItemsInRoot(DefaultRouter):
 
@@ -38,6 +39,7 @@ urlpatterns = [
     path('logout/', knox_views.LogoutView.as_view(), name='logout'),
     path('logoutall/', knox_views.LogoutAllView.as_view(), name='logoutall'),
     path('register/', RegisterAPI.as_view(), name = 'register'),
+    path('react/', TemplateView.as_view(template_name = 'index.html')),
     path('', include(router.urls)),
 
 ]

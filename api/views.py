@@ -10,9 +10,9 @@ from django_filters import rest_framework as filters
 
 class ExerciseFilter(filters.FilterSet):
     name = filters.CharFilter(lookup_expr = 'istartswith')
-    body_part = filters.CharFilter(lookup_expr = 'istartswith')
-    equipment = filters.CharFilter(lookup_expr = 'istartswith')
+    # body_part = filters.CharFilter(lookup_expr = 'istartswith')
     muscle_group = filters.CharFilter(lookup_expr = 'istartswith')
+    equipment = filters.CharFilter(lookup_expr = 'istartswith')
 
     '''
     muscle_group = filters.ModelChoiceFilter(

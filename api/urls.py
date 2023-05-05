@@ -13,7 +13,7 @@ class RouterWithExtraItemsInRoot(DefaultRouter):
                   'login':'login',
                   'logout':'logout',
                   'logoutall':'logoutall',
-                 
+                 'react':'react'
                   }
 
     def get_api_root_view(self, api_urls=None):
@@ -27,6 +27,8 @@ class RouterWithExtraItemsInRoot(DefaultRouter):
 
 router = RouterWithExtraItemsInRoot()
 router.register (r'exercises', views.ExercisesViewSet)
+router.register (r'routines', views.RoutineViewset)
+
 router.extra_urls['url/path'] = 'view_name'
 
 
@@ -39,7 +41,7 @@ urlpatterns = [
     path('logout/', knox_views.LogoutView.as_view(), name='logout'),
     path('logoutall/', knox_views.LogoutAllView.as_view(), name='logoutall'),
     path('register/', RegisterAPI.as_view(), name = 'register'),
-    path('react/', TemplateView.as_view(template_name = 'index.html')),
+    path('react/', TemplateView.as_view(template_name = 'index.html'),name = 'react'),
     path('', include(router.urls)),
 
 ]

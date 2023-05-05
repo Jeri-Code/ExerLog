@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from routine_builder.models import Exercises
+from routine_builder.models import Exercises, Routine
 
 class ExercisesSerializer(serializers.ModelSerializer):
     class Meta:
@@ -9,3 +9,9 @@ class ExercisesSerializer(serializers.ModelSerializer):
                   
                   )
         read_only_fields = fields
+
+class RoutineSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Routine
+        fields = ['name', 'day', 'user_id']

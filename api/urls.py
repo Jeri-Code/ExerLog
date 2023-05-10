@@ -27,7 +27,9 @@ class RouterWithExtraItemsInRoot(DefaultRouter):
 
 router = RouterWithExtraItemsInRoot()
 router.register (r'exercises', views.ExercisesViewSet)
+router.register (r'workouts', views.WorkoutViewSet)
 router.register (r'routines', views.RoutineViewset)
+
 
 router.extra_urls['url/path'] = 'view_name'
 
@@ -42,6 +44,8 @@ urlpatterns = [
     path('logoutall/', knox_views.LogoutAllView.as_view(), name='logoutall'),
     path('register/', RegisterAPI.as_view(), name = 'register'),
     path('react/', TemplateView.as_view(template_name = 'index.html'),name = 'react'),
+    path('api-auth/', include('rest_framework.urls')),
+
     path('', include(router.urls)),
 
 ]

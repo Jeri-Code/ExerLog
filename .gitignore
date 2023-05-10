@@ -163,3 +163,4 @@ cython_debug/
 
 exerlog/settings.py
 exerlog/__pycache__/settings.cpython-311.pyc
+routine_builder/migrations

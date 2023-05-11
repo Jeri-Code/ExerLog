@@ -37,7 +37,7 @@ class Routine(models.Model):
     routine_name = models.CharField(blank=False, null = False)
     day = models.CharField( choices = DAY_CHOICES)
     status = models.CharField(max_length=8, choices=STATUSES, default=STATUSES[0][0])
-    user = models.ForeignKey(User, related_name="routines", on_delete=models.CASCADE, blank=True, null=True)
+    user = models.ForeignKey(User, related_name="routines", on_delete=models.CASCADE, blank=False, null=False)
 
 
     class Meta:

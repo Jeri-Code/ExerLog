@@ -31,12 +31,14 @@ class ExerciseFilter(filters.FilterSet):
 
 '''
 class ExercisesViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated,]
     queryset = Exercises.objects.all()
     serializer_class = ExercisesSerializer
     filterset_class = ExerciseFilter
 
 
 class WorkoutViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated,]
     serializer_class = WorkoutSerializer
     queryset = Workout.objects.all()
 
@@ -44,12 +46,14 @@ class WorkoutViewSet(viewsets.ModelViewSet):
 
 
 class RoutineViewset(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated,]
     serializer_class = RoutineSerializer
     queryset = Routine.objects.all()
   
     def get_queryset(self, *args, **kwargs):
         return Routine.objects.all().filter(user=self.request.user.id)
     
+
 
 
 

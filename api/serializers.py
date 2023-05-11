@@ -24,17 +24,21 @@ class WorkoutSerializer(serializers.ModelSerializer):
     
 class RoutineSerializer(serializers.ModelSerializer):
     routine_workouts = WorkoutSerializer(many = True, read_only = True)
+    user = serializers.CharField(source = 'user.username', read_only  = True,)
     class Meta:     
         model = Routine
         fields = ['id','user','routine_name','day','routine_workouts']
 
     
-def create(self, validated_data):
-    request_user = self.context['request'].user
-    instance = Routine.objects.create(user=request_user)
-
-    
-    return instance
+    def create(self, validated_data):
+        request_user = self.context['request'].user
+        
+        if validated_data:
+                name = validated_data.get('routine_name')
+                day = validated_data.get('day')
+                workout_exercise = Routine.objects.create(user=request_user,routine_name=name, day=day)
+        
+        return workout_exercise
 
 
 

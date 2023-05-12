@@ -57,6 +57,8 @@ class Workout(models.Model):
     reps = models.IntegerField(blank=True, null=True)
     duration = models.IntegerField(blank = True, null = True)
     routine = models.ForeignKey(Routine, on_delete=models.CASCADE,related_name = "routine_workouts")
+    user = models.ForeignKey(User, related_name="workout", on_delete=models.CASCADE, blank=False, null=False)
+
     
     class Meta:
         db_table = 'workouts'

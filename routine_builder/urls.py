@@ -1,11 +1,8 @@
-# myapi/urls.py
 from django.urls import path, include
 from . import views
-from users.views import RegisterAPI
-from users.views import LoginAPI
+from users.views import RegisterAPI,LoginAPI
 from knox import views as knox_views
 from rest_framework.routers import DefaultRouter
-from django .views.generic import TemplateView
 
 #Add extra url paths to DRF router API Root View
 class RouterWithExtraItemsInRoot(DefaultRouter):

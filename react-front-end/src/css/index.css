@@ -114,6 +114,7 @@ h1, h2 {
   align-items: center;
 }
 
+/* Media Options */
 @media screen and (max-width: 769px) {
   .menu {
     display: flex;
@@ -148,7 +149,7 @@ h1, h2 {
     letter-spacing: 1px;
     transition: all 0.3s ease-in-out;
   }
-  
+
   #mobile {
     display: block;
   }

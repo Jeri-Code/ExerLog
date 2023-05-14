@@ -1,1 +1,6 @@
 Django==4.2
+django_filter==23.1
+django_rest_knox==4.2.0
+djangorestframework==3.14.0
+knox==0.1.14
+psycopg2-binary == 2.9.6

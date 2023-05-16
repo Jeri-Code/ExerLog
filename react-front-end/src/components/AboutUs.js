@@ -16,7 +16,7 @@ export default function AboutUs(props) {
             <i className="fab fa-linkedin"></i>
           </a>
           <a href="https://instagram.com/brandon.tran">
-            <i className="fab fa-instagram"></i>
+            <i className="fa-brands fa-instagram"></i>
           </a>
         </div>
       </div>
@@ -29,7 +29,7 @@ export default function AboutUs(props) {
             <i className="fab fa-linkedin"></i>
           </a>
           <a href="https://www.instagram.com/jerichot__/">
-            <i className="fab fa-instagram"></i>
+            <i className="fa-brands fa-instagram"></i>
           </a>
         </div>
       </div>

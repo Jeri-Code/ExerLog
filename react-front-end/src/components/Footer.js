@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Footer(props) {
-return (
+  return (
     <footer className="black-footer">
       <div className="footer-content">
         <h2 className="footer-title">Plan, Execute, Consist.</h2>
@@ -13,8 +13,8 @@ return (
             <i className="fab fa-github fa-2x"></i>
           </a>
         </div>
-        <p className="footer-rights">© 2023 ExerLog. All Rights Reserved.</p>
+        <p className="footer-rights">© {new Date().getFullYear()} ExerLog. All Rights Reserved.</p>
       </div>
     </footer>
-	);
+  );
 }

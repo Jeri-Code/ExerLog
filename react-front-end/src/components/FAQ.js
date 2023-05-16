@@ -19,7 +19,7 @@ return (
       <div class="faq-box">
         <img src={Bulb} alt="Light bulb made of gears"/>
         <h2>Need goals?</h2>
-        <p>Some great ways to start working out are to see what routines or exercises you can start adding to your weekly planner. Have a look at this website, which is what this website is inspired from.</p>
+        <p>Some great ways to start working out are to see what routines or exercises you can start adding to your weekly planner. Have a look at this <a href="https://musclewiki.com/">website</a>, which is what this project is inspired from.</p>
       </div>
     </div>
     )

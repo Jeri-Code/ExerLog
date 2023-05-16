@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import FAQ from "./FAQ";
 import Homepage from "./Homepage";
 import AboutUs from "./AboutUs";
+import Login from "./Login";
 import "../css/index.css";
 
 function App(props) {
@@ -12,11 +13,12 @@ function App(props) {
     <div className="App">
     <Header />
     <main>
-    	<Routes>
-        	<Route path="/Homepage" element={<Homepage />} />
-        	<Route path="/FAQ" element={<FAQ />} />
-        	<Route path="/AboutUs" element={<AboutUs />} />
-    	</Routes>
+      <Routes>
+          <Route path="/Homepage" element={<Homepage />} />
+          <Route path="/FAQ" element={<FAQ />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/Login" element={<Login />} />
+      </Routes>
     </main>
     <Footer />
     </div>

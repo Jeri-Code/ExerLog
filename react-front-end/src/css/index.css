@@ -183,51 +183,76 @@ div {
   align-items: center;
 }
 
+/* Login Page */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
 
-/* Media Options */
-@media screen and (max-width: 769px) {
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: fixed;
-    top: 154px;
-    right: -300px;
-    width: 250px;
-    height: 100vh;
-    background: linear-gradient(to top, #55acee, #ffffff);
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-    padding: 40px 0 0 10px;
-    transition: right 0.5s ease-in-out;
-  }
+.login-form {
+  width: 300px;
+}
 
-  #navbar.active .menu {
-    right: 0px;
-  }
+.login-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
 
-  .nav-item:hover {
-    color: black;
-  }
+.form-group {
+  margin-bottom: 15px;
+}
 
-  .nav-item {
-    margin-bottom: 25px;
-    color: #444444;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    letter-spacing: 1px;
-    transition: all 0.3s ease-in-out;
-  }
+.form-group > label {
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  margin-bottom: 5px;
+}
 
-  #mobile {
-    display: block;
-  }
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
-  #mobile i {
-    font-size: 24px;
-    cursor: pointer;
-  }
+.login-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4285f4;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0px 0px 2px rgb(51, 51, 51);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #3367d6;
+  transition: transform 0.3s ease;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.forgot-password a {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
 }
 
 /* FAQ Page */
@@ -389,4 +414,50 @@ div {
   font-size: 18px;
   margin-top: 20px;
   text-align: center;
+}
+
+/* Media Options */
+@media screen and (max-width: 769px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 154px;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(to top, #55acee, #ffffff);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 40px 0 0 10px;
+    transition: right 0.5s ease-in-out;
+  }
+
+  #navbar.active .menu {
+    right: 0px;
+  }
+
+  .nav-item:hover {
+    color: black;
+  }
+
+  .nav-item {
+    margin-bottom: 25px;
+    color: #444444;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #mobile {
+    display: block;
+  }
+
+  #mobile i {
+    font-size: 24px;
+    cursor: pointer;
+  }
 }

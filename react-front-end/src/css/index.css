@@ -278,6 +278,57 @@ div {
   color: white;
 }
 
+/* About Us Page */
+.about-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-family: 'Nunito Sans', sans-serif;
+  margin-top: 50px;
+  margin-left: 0;
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 15px;
+  align-items: center;
+}
+
+.team-member img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-member h2 {
+  margin-top: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 24px;
+}
+
+.team-member p {
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+}
+
+.social-icons i {
+  font-size: 50px;
+  margin: 3px;
+  vertical-align: middle;
+}
 
 /* Black footer */
 .black-footer {

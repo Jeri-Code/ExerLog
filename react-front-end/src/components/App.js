@@ -8,21 +8,19 @@ import AboutUs from "./AboutUs";
 import "../css/index.css";
 
 function App(props) {
-	return (
-		<div className="App">
-			<header className="App-header">
-				<main>
-					<Header />
-					<Routes>
-						<Route index path="/Homepage" element={<Homepage />} />
-						<Route index path="/FAQ" element={<FAQ />} />
-						<Route index path="/AboutUs" element={<AboutUs />} />
-					</Routes>
-					<Footer />
-				</main>
-			</header>
-		</div>
-	);
+  return (
+    <div className="App">
+    <Header />
+    <main>
+    	<Routes>
+        	<Route path="/Homepage" element={<Homepage />} />
+        	<Route path="/FAQ" element={<FAQ />} />
+        	<Route path="/AboutUs" element={<AboutUs />} />
+    	</Routes>
+    </main>
+    <Footer />
+    </div>
+  );
 }
 
 export default App;

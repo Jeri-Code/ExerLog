@@ -35,6 +35,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.21.8",
-		"eslint": "^5.12.0"
+		"eslint": "^5.12.0",
+		"prisma": "^4.14.0"
 	}
 }

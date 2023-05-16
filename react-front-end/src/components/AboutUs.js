@@ -1,5 +1,4 @@
 import React from "react";
-import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import Brandon from "../img/brandon.jpg";
 import Jericho from "../img/jericho.jpg";
 

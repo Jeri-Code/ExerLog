@@ -82,7 +82,7 @@ div {
   cursor: pointer;
   transition: all 0.3s ease;
   position: absolute;
-  margin: 230px 100px 50px -310px;
+  margin: 220px 100px 50px -310px;
 }
 
 .join-now-btn:hover {
@@ -142,7 +142,8 @@ div {
   transition: 0.8s;
 }
 
-.nav-item, .auth-button {
+.nav-item,
+.auth-button {
   margin-left: 16px;
 }
 
@@ -155,11 +156,10 @@ div {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-left: 10px;
 }
 
-.auth-button {
-  margin-left: 16px;
+.auth-buttons .auth-button {
+  margin: 7px;
   border: 2px solid blue;
   padding: 8px 20px;
   border-radius: 4px;
@@ -168,7 +168,7 @@ div {
   color: #ffffff;
 }
 
-.auth-button:hover {
+.auth-buttons .auth-button:hover {
   background-color: rgb(0, 225, 255);
   color: #000000;
   transition: 0.5s;
@@ -182,6 +182,7 @@ div {
   color: black;
   align-items: center;
 }
+
 
 /* Media Options */
 @media screen and (max-width: 769px) {
@@ -287,7 +288,7 @@ div {
   padding: 0;
 }
 
-.title {
+.about-us-title {
   font-family: 'Nunito Sans', sans-serif;
   margin-top: 50px;
   margin-left: 0;

@@ -6,7 +6,7 @@ import Jericho from "../img/jericho.jpg";
 export default function AboutUs(props) {
   return (
     <div>
-	<h1 className="title">Meet the Team</h1>
+	<h1 className="about-us-title">Meet the Team</h1>
     <div className="about-us-container">
       <div className="team-member">
         <h2>Brandon Tran</h2>

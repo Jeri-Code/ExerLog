@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import FAQ from "./FAQ";
 import Homepage from "./Homepage";
 import "../css/index.css";
 
@@ -13,6 +14,7 @@ function App(props) {
 					<Header />
 					<Routes>
 						<Route index path="/Homepage" element={<Homepage />} />
+						<Route index path="/FAQ" element={<FAQ />} />
 					</Routes>
 					<Footer />
 				</main>

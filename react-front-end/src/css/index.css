@@ -264,7 +264,7 @@ input {
 }
 
 .faq-box {
-  height: 765px;
+  height: 680px;
   width: 420px;
   margin: 45px;
   padding: 20px;
@@ -416,8 +416,10 @@ input {
   text-align: center;
 }
 
-/* Media Options */
-@media screen and (max-width: 769px) {
+/* Media Queries */
+
+/* For screens smaller than 769px */
+@media screen and (max-width: 768px) {
   .menu {
     display: flex;
     flex-direction: column;
@@ -459,5 +461,111 @@ input {
   #mobile i {
     font-size: 24px;
     cursor: pointer;
+  }
+}
+
+/* Navigation Bar (continued) */
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #0263c4;
+}
+
+/* Media Queries */
+@media (max-width: 1080px) {
+  .title {
+    margin: 100px 100px 50px 100px;
+  }
+
+  .second-title {
+    margin: -40px 80px 50px 100px;
+  }
+
+  .treadmill {
+    margin: 60px 500px 50px 0px;
+  }
+
+  .dumbbells {
+    margin: -80px 80px 50px 0px;
+  }
+
+  .join-now-btn {
+    margin: 100px 20px 50px -310px;
+  }
+
+  .sign-up {
+    margin: 20px -600px 50px 0px;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .nav-item {
+    margin-right: 10px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    margin: 60px 50px 50px 50px;
+    font-size: 30px;
+  }
+
+  .second-title {
+    margin: -20px 40px 50px 50px;
+    font-size: 18px;
+  }
+
+  .treadmill {
+    display: none;
+  }
+
+  .dumbbells {
+    display: none;
+  }
+
+  .join-now-btn {
+    margin: 100px 20px 50px -140px;
+    font-size: 1.5rem;
+    padding: 20px 40px;
+  }
+
+  .sign-up {
+    margin: 20px -300px 50px 0px;
+    font-size: 24px;
+  }
+
+  .logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin: 10px 0;
   }
 }

@@ -19,7 +19,7 @@ const Header = () => {
           <Link to="/WeeklyPlanner" className="nav-item" aria-label="Weekly Planner">
             Weekly Planner
           </Link>
-          <Link to="/Account" className="nav-item" aria-label="Account">
+          <Link to="/Login" className="nav-item" aria-label="Account">
             Account
           </Link>
           <Link to="/FAQ" className="nav-item" aria-label="FAQ">
@@ -30,7 +30,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="auth-buttons">
-          <Link to="/SignUp" className="auth-button" aria-label="Sign Up">
+          <Link to="/Registration" className="auth-button" aria-label="Sign Up">
             Sign Up
           </Link>
           <Link to="/Login" className="auth-button" aria-label="Login">

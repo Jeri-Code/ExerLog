@@ -8,8 +8,8 @@ const Homepage = (props) => {
       <img src={Treadmill} alt="Black treadmill" className="treadmill" />
       <h1 className="title">
         ExerLog
-        <button className="join-now-btn">Join Now</button>
       </h1>
+      <a href="/Registration"><button className="join-now-btn">Join Now</button></a>      
       <div className="second-title">
         Gym Routines done simple.
         <img src={Dumbbells} alt="Two dumbbells stacked on top of each other" className="dumbbells" />

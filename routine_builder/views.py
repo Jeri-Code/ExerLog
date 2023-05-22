@@ -20,7 +20,6 @@ class ExerciseFilter(filters.FilterSet):
 
 '''
 class ExercisesViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated,]
     queryset = Exercises.objects.all()
     serializer_class = ExercisesSerializer
     filterset_class = ExerciseFilter

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer(props) {
   return (
-    <footer className="black-footer">
+    <footer className="footer">
       <div className="footer-content">
         <h2 className="footer-title">Plan, Execute, Consist.</h2>
         <p className="footer-description">

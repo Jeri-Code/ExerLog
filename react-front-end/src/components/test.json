@@ -1,0 +1,9 @@
+{
+    "Monday": ["Exercise 1", "Exercise 2"],
+    "Tuesday": ["Exercise 3", "Exercise 4"],
+    "Wednesday": ["Exercise 5"],
+    "Thursday": [],
+    "Friday": ["Exercise 6", "Exercise 7"],
+    "Saturday": ["Exercise 8"],
+    "Sunday": []
+  }

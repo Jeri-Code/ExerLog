@@ -189,6 +189,63 @@ div {
   align-items: center;
 }
 
+/* Weekly Planner */
+.Week {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: -500px;
+}
+
+.dropdown {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.ExerciseList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ExerciseList li {
+  margin-bottom: 10px;
+}
+
+.addExercise {
+  margin-top: 20px;
+}
+
+.addExercise input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.day {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ExerciseList li {
+  border-bottom: 1px solid black;
+  padding: 5px 0;
+}
+
+.ExerciseList {
+  /* Add your styles for ExerciseList component here */
+}
+
 /* Login Page */
 .login-container {
   display: flex;

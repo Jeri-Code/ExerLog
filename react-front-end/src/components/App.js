@@ -7,6 +7,8 @@ import Homepage from "./Homepage";
 import AboutUs from "./AboutUs";
 import Login from "./Login";
 import Registration from "./Registration";
+import WeeklyPlanner from "./WeeklyPlanner";
+
 import "../css/index.css";
 
 function App(props) {
@@ -20,6 +22,7 @@ function App(props) {
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Registration" element={<Registration />} />
+          <Route path="/WeeklyPlanner" element={<WeeklyPlanner />} />
       </Routes>
     </main>
     <Footer />

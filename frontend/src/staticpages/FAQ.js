@@ -1,7 +1,7 @@
 import React from "react";
-import Bulb from "./img/thinkingbulb.png";
-import PaperPlane from "./img/paperplane.png";
-import Brain from "./img/brain.png";
+import Bulb from "../img/thinkingbulb.png";
+import PaperPlane from "../img/paperplane.png";
+import Brain from "../img/brain.png";
 
 export default function FAQ(props) {
 return (

@@ -1,6 +1,6 @@
 import React from "react";
-import Dumbbells from "./img/dumbbells.png";
-import Treadmill from "./img/treadmill.png";
+import Dumbbells from "../img/dumbbells.png";
+import Treadmill from "../img/treadmill.png";
 
 const Homepage = (props) => {
   return (

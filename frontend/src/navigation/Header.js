@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import GymLogo from "./img/favicon.ico";
+import GymLogo from "../img/favicon.ico";
 import { Link } from "react-router-dom";
 
 const Header = () => {

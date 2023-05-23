@@ -1,6 +1,6 @@
 import React from "react";
-import Brandon from "./img/brandon.jpg";
-import Jericho from "./img/jericho.jpg";
+import Brandon from "../img/brandon.jpg";
+import Jericho from "../img/jericho.jpg";
 
 export default function AboutUs(props) {
   return (
@@ -8,7 +8,7 @@ export default function AboutUs(props) {
 	<h1 className="about-us-title">Meet the Team</h1>
     <div className="about-us-container">
       <div className="team-member">
-        <h2>Brandon Tran</h2>
+        <h1>Brandon Tran</h1>
         <img src={Brandon} alt="Brandon Tran" />
         <p>Applied Computing, UW Bothell</p>
         <div className="social-icons">
@@ -21,7 +21,7 @@ export default function AboutUs(props) {
         </div>
       </div>
       <div className="team-member">
-        <h2>Jericho Timbol</h2>
+        <h1>Jericho Timbol</h1>
         <img src={Jericho} alt="Jericho Timbol" />
         <p>Applied Computing, UW Bothell</p>
         <div className="social-icons">

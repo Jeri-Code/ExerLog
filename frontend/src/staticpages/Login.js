@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import WorkoutMachine from "./img/workout-machine.png";
+import WorkoutMachine from "../img/workout-machine.png";
 
 export default function Login(props) {
     const [email, setEmail] = useState("");

@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import Header from "./Header";
-import Footer from "./Footer";
-import Homepage from "./Homepage";
-import FAQ from "./FAQ";
-import AboutUs from "./AboutUs";
-import Login from "./Login";
+import Header from "./navigation/Header";
+import Footer from "./navigation/Footer";
+import Homepage from "./staticpages/Homepage";
+import FAQ from "./staticpages/FAQ";
+import AboutUs from "./staticpages/AboutUs";
+import Login from "./staticpages/Login";
 import Register from "./components/auth/Register";
+import WeeklyPlanner from "./WeeklyPlanner";
 import Root from "./Root";
 import { ToastContainer } from "react-toastify";
 
@@ -29,6 +30,7 @@ class App extends Component {
           <Route path="/AboutUs" component={AboutUs} />
           <Route path="/Login" component={Login} />
           <Route path="/Register" component={Register} />
+          <Route path="/WeeklyPlanner" component={WeeklyPlanner} />
           </Switch>
         </main>
         <Footer />

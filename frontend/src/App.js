@@ -1,8 +1,15 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom"; // <--- remove BrowserRouter
+import { Route, Switch } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
+import Homepage from "./Homepage";
+import FAQ from "./FAQ";
+import AboutUs from "./AboutUs";
+import Login from "./Login";
 import Register from "./components/auth/Register";
-import Root from "./Root"; // <------------- new import
+import Root from "./Root";
 import { ToastContainer } from "react-toastify";
+
 import axios from "axios";
 
 axios.defaults.baseURL = "http://127.0.0.1:8000";
@@ -11,13 +18,20 @@ axios.defaults.baseURL = "http://127.0.0.1:8000";
 class App extends Component {
   render() {
     return (
-      <div>
-        <Root>
+      <div className="App">
+      <Root>
+        <Header />
+        <main>
         <ToastContainer hideProgressBar={true} newestOnTop={true} />
-
           <Switch>
-            <Route path="/register" component={Register} />
+          <Route path="/Homepage" component={Homepage} />
+          <Route path="/FAQ" component={FAQ} />
+          <Route path="/AboutUs" component={AboutUs} />
+          <Route path="/Login" component={Login} />
+          <Route path="/Register" component={Register} />
           </Switch>
+        </main>
+        <Footer />
         </Root>
       </div>
     );

@@ -27,6 +27,7 @@ class Register extends Component {
       status: ""
     };
   }
+
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -82,22 +83,20 @@ class Register extends Component {
     let successAlert = (
       <Alert variant="success">
         <Alert.Heading>Account created</Alert.Heading>
-        <p>
-          Account Successfully Created!
-        </p>
+        <p>Account Successfully Created!</p>
       </Alert>
     );
 
     const form = (
-      <div>
+      <div className="registration">
         <Form>
           <Form.Group controlId="usernameId">
-            <Form.Label>User name</Form.Label>
+            <Form.Label>Username</Form.Label>
             <Form.Control
               isInvalid={this.state.usernameError}
               type="text"
               name="username"
-              placeholder="Enter user name"
+              placeholder="Enter a username"
               value={this.state.username}
               onChange={this.onChange}
             />
@@ -107,12 +106,12 @@ class Register extends Component {
           </Form.Group>
 
           <Form.Group controlId="emailId">
-            <Form.Label>Your Email</Form.Label>
+            <Form.Label>Email</Form.Label>
             <Form.Control
               isInvalid={this.state.emailError}
               type="text"
               name="email"
-              placeholder="Enter email"
+              placeholder="Enter an email"
               value={this.state.email}
               onChange={this.onChange}
             />
@@ -122,12 +121,12 @@ class Register extends Component {
           </Form.Group>
 
           <Form.Group controlId="passwordId">
-            <Form.Label>Your password</Form.Label>
+            <Form.Label>Password</Form.Label>
             <Form.Control
               isInvalid={this.state.passwordError}
               type="password"
               name="password"
-              placeholder="Enter password"
+              placeholder="Enter a password"
               value={this.password}
               onChange={this.onChange}
             />
@@ -152,12 +151,12 @@ class Register extends Component {
     return (
       <Container>
         <Row>
-          <Col md="6">
-            <h1>Register</h1>
+          <Col md="6" className="offset-md-3">
+            <h1>Welcome to ExerLog</h1>
             {alert}
             {this.state.status !== "success" && form}
-            <p className="mt-2">
-              Already have account? <Link to="/login">Login</Link>
+            <p className="login-link">
+              Already have an account? <Link to="/Login">Login</Link>
             </p>
           </Col>
         </Row>

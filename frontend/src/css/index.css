@@ -1,0 +1,722 @@
+/* Overall Page */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  justify-content: center;
+  background: linear-gradient(to top, rgba(38, 60, 255, 0.932), rgb(21, 181, 230));
+  font-family: "Source Sans Pro", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome > h1 {
+  padding: 1rem;
+  display: inline-block;
+  font-size: 65px;
+  margin-left: 5px;
+  text-shadow: 0.5px 0.5px #000000;
+}
+
+div {
+  display: block;
+}
+
+/* Home Page */
+.welcome {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.title {
+  font-family: 'Inika', serif;
+  font-weight: lighter;
+  color: #fff9f9;
+  margin: -150px 250px 50px 200px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.second-title {
+  color: white;
+  font-family: 'Inika', serif;
+  font-weight: lighter;
+  font-size: 1.3vw;
+  position: relative;
+  margin: -60px 150px 50px 200px;
+  text-shadow: 0.5px 0.5px #000000;
+}
+
+.treadmill {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  margin: -200px 750px 50px 0px;
+}
+
+.dumbbells {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  margin: -200px 150px 50px 0px;
+}
+
+.join-now-btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  background-color: #0263c4;
+  color: white;
+  padding: 30px 50px;
+  border: none;
+  border-radius: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  margin: 50px 100px 50px -310px;
+}
+
+.join-now-btn:hover {
+  background-color: #1874CD;
+}
+
+.sign-up {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+  font-size: 30px;
+  margin: 60px -600px 50px 0px;
+}
+
+.sign-up > a {
+  color: rgba(0, 0, 0, 0.904);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.sign-up > a:hover {
+  color: rgb(63, 63, 63);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navigation Bar */
+.logo img {
+  width: 130px;
+  height: 130px;
+}
+
+#navbar {
+  align-items: right;
+  justify-content: space-between;
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  flex: 1;
+  padding: 0 20px;
+}
+
+.nav-item {
+  font-family: 'Nunito Sans', sans-serif;
+  position: relative;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: gray;
+}
+
+.nav-item:hover {
+  color: rgba(33, 61, 187, 0.904);
+  transition: 0.8s;
+}
+
+.nav-item,
+.auth-button {
+  margin-left: 16px;
+}
+
+.logo {
+  margin-right: 16px;
+}
+
+.auth-buttons {
+  font-family: 'Nunito Sans', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.auth-buttons .auth-button {
+  margin: 7px;
+  border: 2px solid blue;
+  padding: 8px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: #3f51b5;
+  color: #ffffff;
+}
+
+.auth-buttons .auth-button:hover {
+  background-color: rgb(0, 225, 255);
+  color: #000000;
+  transition: 0.5s;
+}
+
+#mobile {
+  display: none;
+}
+
+#mobile i {
+  color: black;
+  align-items: center;
+}
+
+/* Weekly Planner */
+.Week {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: -500px;
+}
+
+.dropdown {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.ExerciseList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ExerciseList li {
+  margin-bottom: 10px;
+}
+
+.addExercise {
+  margin-top: 20px;
+}
+
+.addExercise input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.day {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ExerciseList li {
+  border-bottom: 1px solid black;
+  padding: 5px 0;
+}
+
+.ExerciseList {
+  /* Add your styles for ExerciseList component here */
+}
+
+/* Login Page */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: -250px;
+}
+
+.login-form {
+  width: 300px;
+}
+
+.login-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group > label {
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4285f4;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0px 0px 2px rgb(51, 51, 51);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #3367d6;
+  transition: transform 0.3s ease;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.forgot-password a {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Sign Up Page */
+.container {
+  font-family: 'Poppins', sans-serif;
+  margin-top: -200px;
+}
+
+.registration h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.alert {
+  margin-top: 20px;
+}
+
+.alert p {
+  margin-bottom: 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.is-invalid {
+  border-color: #a31422;
+}
+
+.feedback {
+  font-size: 16px;
+  color: #dc3545;
+}
+
+.registration button {
+    font-size: 20px;
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 50px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.registration button:hover {
+  background-color: #0056b3;
+}
+
+.login-link {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.login-link > a  {
+  color: rgba(0, 0, 0, 0.904);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link > a:hover {
+  color: rgb(63, 63, 63);
+  transition: all 0.3s ease-in-out;
+}
+
+/* FAQ Page */
+.faq-container {
+  margin-top: -200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-box {
+  height: 680px;
+  width: 420px;
+  margin: 45px;
+  padding: 20px;
+  background-color: #2bb4f3;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgb(51, 51, 51);
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.faq-box:hover {
+  transform: translateY(-5px);
+}
+
+.faq-box img {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.faq-box h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-align: left;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.faq-box p {
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.5;
+  color: white;
+}
+
+/* About Us Page */
+.about-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.about-us-title {
+  font-family: 'Nunito Sans', sans-serif;
+  margin-top: -250px;
+  margin-left: 0;
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 15px;
+  align-items: center;
+}
+
+.team-member img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-member h2 {
+  margin-top: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 24px;
+}
+
+.team-member p {
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+}
+
+.social-icons i {
+  font-size: 50px;
+  margin: 3px;
+  vertical-align: middle;
+}
+
+/* Black footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+  padding: 20px;
+  background-color: rgb(0, 27, 53);
+  color: white;
+  bottom: 0;
+
+}
+
+/* Footer content */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer title */
+.footer-title {
+  font-family: 'Abel', sans-serif;
+  font-size: 50px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+/* Footer description */
+.footer-description {
+  font-family: 'Abel', sans-serif;
+  font-size: 18px;
+  width: 815px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Footer icons */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-icons a {
+  margin: 0 10px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-icons a:hover {
+  color: gray;
+}
+
+/* Footer rights */
+.footer-rights {
+  font-family: 'Abel', sans-serif;
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Media Queries */
+/* For screens smaller than 769px */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 154px;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(to top, #55acee, #ffffff);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 40px 0 0 10px;
+    transition: right 0.5s ease-in-out;
+  }
+
+  #navbar.active .menu {
+    right: 0px;
+  }
+
+  .nav-item:hover {
+    color: black;
+  }
+
+  .nav-item {
+    margin-bottom: 25px;
+    color: #444444;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #mobile {
+    display: block;
+  }
+
+  #mobile i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+/* Navigation Bar (continued) */
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #0263c4;
+}
+
+/* Media Queries */
+@media (max-width: 1080px) {
+  .title {
+    margin: 100px 100px 50px 100px;
+  }
+
+  .second-title {
+    margin: -40px 80px 50px 100px;
+  }
+
+  .treadmill {
+    margin: 60px 500px 50px 0px;
+  }
+
+  .dumbbells {
+    margin: -80px 80px 50px 0px;
+  }
+
+  .join-now-btn {
+    margin: 100px 20px 50px -310px;
+  }
+
+  .sign-up {
+    margin: 20px -600px 50px 0px;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .nav-item {
+    margin-right: 10px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    margin: 60px 50px 50px 50px;
+    font-size: 30px;
+  }
+
+  .second-title {
+    margin: -20px 40px 50px 50px;
+    font-size: 18px;
+  }
+
+  .treadmill {
+    display: none;
+  }
+
+  .dumbbells {
+    display: none;
+  }
+
+  .join-now-btn {
+    margin: 100px 20px 50px -140px;
+    font-size: 1.5rem;
+    padding: 20px 40px;
+  }
+
+  .sign-up {
+    margin: 20px -300px 50px 0px;
+    font-size: 24px;
+  }
+
+  .logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+}

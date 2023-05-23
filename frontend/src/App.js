@@ -7,7 +7,7 @@ import FAQ from "./staticpages/FAQ";
 import AboutUs from "./staticpages/AboutUs";
 import Login from "./staticpages/Login";
 import Register from "./components/auth/Register";
-import WeeklyPlanner from "./WeeklyPlanner";
+import WeeklyPlanner from "./staticpages/WeeklyPlanner";
 import Root from "./Root";
 import { ToastContainer } from "react-toastify";
 

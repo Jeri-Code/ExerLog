@@ -147,8 +147,7 @@ div {
   transition: 0.8s;
 }
 
-.nav-item,
-.auth-button {
+.nav-item, .auth-button {
   margin-left: 16px;
 }
 
@@ -317,6 +316,40 @@ input {
 .forgot-password a:hover {
   text-decoration: underline;
 }
+
+/* Weekly Planner */
+.notepad {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(53, 52, 52, 0.438);
+  color: white;
+  padding: 10px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.notepad h2 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.notepad button {
+  margin-bottom: 10px;
+}
+
+.notepad ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.notepad li {
+  margin-bottom: 5px;
+}
+
 
 /* Sign Up Page */
 .container {

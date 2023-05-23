@@ -44,6 +44,12 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    "http://127.0.0.1:3000"
+
+]
+
 SWAGGER_SETTINGS = {
     'SECURITY_DEFINITIONS': {
         'api_key': {

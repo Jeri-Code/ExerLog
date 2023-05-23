@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import FAQ from "./FAQ";
@@ -8,24 +8,29 @@ import AboutUs from "./AboutUs";
 import Login from "./Login";
 import Registration from "./Registration";
 import WeeklyPlanner from "./WeeklyPlanner";
+import { ToastContainer } from "react-toastify";
+import axios from "axios";
 
 import "../css/index.css";
 
-function App(props) {
+axios.defaults.baseURL = "http://127.0.0.1:8000";
+
+function App() {
   return (
     <div className="App">
-    <Header />
-    <main>
-      <Routes>
-          <Route path="/Homepage" element={<Homepage />} />
-          <Route path="/FAQ" element={<FAQ />} />
-          <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Registration" element={<Registration />} />
-          <Route path="/WeeklyPlanner" element={<WeeklyPlanner />} />
-      </Routes>
-    </main>
-    <Footer />
+      <Header />
+      <main>
+        <ToastContainer hideProgressBar newestOnTop />
+        <Switch>
+          <Route path="/Homepage" component={Homepage} />
+          <Route path="/FAQ" component={FAQ} />
+          <Route path="/AboutUs" component={AboutUs} />
+          <Route path="/Login" component={Login} />
+          <Route path="/Registration" component={Registration} />
+          <Route path="/WeeklyPlanner" component={WeeklyPlanner} />
+        </Switch>
+      </main>
+      <Footer />
     </div>
   );
 }

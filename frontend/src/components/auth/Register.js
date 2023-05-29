@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 import axios from "axios";
@@ -157,7 +157,7 @@ class Register extends Component {
             {alert}
             {this.state.status !== "success" && form}
             <p className="mt-2">
-              Already have account? <Link to="/login">Login</Link>
+              Already have an account? <a id="LoginLink" href="/login" onclick="MyFunction();">Login</a>            
             </p>
           </Col>
         </Row>

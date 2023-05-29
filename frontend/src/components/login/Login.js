@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import { Container, Button, Row, Col, Form } from "react-bootstrap";
+import { Container, Button, Row, Col, Form, } from "react-bootstrap";
 
 import { login } from "./LoginActions.js";
 
@@ -11,7 +10,7 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
+      username: "",
       password: ""
     };
   }
@@ -22,26 +21,39 @@ class Login extends Component {
   onLoginClick = () => {
     const userData = {
       email: this.state.email,
+      username: this.state.username,
       password: this.state.password
     };
     this.props.login(userData, "/dashboard");
   };
+
+  if (user) {
+    return (
+      <div>
+        {user.name} is loggged in
+      </div>
+    );
+  }
+
   render() {
     return (
+  
       <Container>
+       
         <Row>
           <Col md="4">
             <h1>Login</h1>
             <Form>
-              <Form.Group controlId="emailId">
-                <Form.Label>Your Email</Form.Label>
+              <Form.Group controlId="usernameId">
+                <Form.Label>Username</Form.Label>
                 <Form.Control
                   type="text"
-                  name="email"
-                  placeholder="Enter email"
-                  value={this.state.email}
+                  name="username"
+                  placeholder="Enter Username"
+                  value={this.state.username}
                   onChange={this.onChange}
                 />
+
               </Form.Group>
 
               <Form.Group controlId="passwordId">
@@ -58,12 +70,10 @@ class Login extends Component {
             <Button color="primary" onClick={this.onLoginClick}>
               Login
             </Button>
+          
             <p className="mt-2">
-              Don't have account? <Link to="/signup">Signup</Link>
-            </p>
-            <p className="mt-2">
-              Forget password?{" "}
-              <Link to="/send_reset_password">Reset Password</Link>
+              Don't have an account? <a id="RegisterLink" href="/register" >Register</a>
+
             </p>
           </Col>
         </Row>

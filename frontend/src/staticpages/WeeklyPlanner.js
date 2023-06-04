@@ -1,12 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function WeeklyPlanner(props) {
+  const [exercises, setExercises] = useState([]);
+
+  useEffect(() => {
+    async function getData() {
+      const data = await fetch('http://localhost:8000/exercises');
+      const dataJson = await data.json();
+      setExercises(dataJson);
+    }
+
+    getData();
+  }, []);
+
   useEffect(() => {
     // Get the dropdown element
-    var dropdown = document.getElementById("daysDropdown");
+    let dropdown = document.getElementById("daysDropdown");
 
     // Define the days of the week
-    var days = [
+    let days = [
       "Monday",
       "Tuesday",
       "Wednesday",
@@ -20,8 +32,8 @@ export default function WeeklyPlanner(props) {
     dropdown.innerHTML = "";
 
     // Create options for each day and add them to the dropdown
-    for (var i = 0; i < days.length; i++) {
-      var option = document.createElement("option");
+    for (let i = 0; i < days.length; i++) {
+      let option = document.createElement("option");
       option.value = days[i];
       option.text = days[i];
       dropdown.appendChild(option);
@@ -29,27 +41,27 @@ export default function WeeklyPlanner(props) {
 
     // Add event listener for dropdown change
     dropdown.addEventListener("change", function () {
-      var selectedDay = this.value;
+      let selectedDay = this.value;
       displayNotepad(selectedDay);
     });
 
     function displayNotepad(day) {
       // Clear the previous notepad if it exists
-      var notepadContainer = document.getElementById("notepadContainer");
+      let notepadContainer = document.getElementById("notepadContainer");
       notepadContainer.innerHTML = "";
 
       // Create the notepad elements
-      var notepad = document.createElement("div");
+      let notepad = document.createElement("div");
       notepad.className = "notepad";
       notepad.innerHTML = "<h2>" + day + "</h2>";
 
-      var addExerciseButton = document.createElement("button");
+      let addExerciseButton = document.createElement("button");
       addExerciseButton.textContent = "Add Exercise";
       addExerciseButton.addEventListener("click", function () {
         addExercise(day);
       });
 
-      var exerciseList = document.createElement("ul");
+      let exerciseList = document.createElement("ul");
       exerciseList.id = "exerciseList";
 
       notepad.appendChild(addExerciseButton);
@@ -59,11 +71,11 @@ export default function WeeklyPlanner(props) {
     }
 
     function addExercise(day) {
-      var exerciseList = document.getElementById("exerciseList");
-      var exerciseInput = prompt("Enter the exercise:");
+      let exerciseList = document.getElementById("exerciseList");
+      let exerciseInput = prompt("Enter the exercise:");
 
       if (exerciseInput) {
-        var exerciseItem = document.createElement("li");
+        let exerciseItem = document.createElement("li");
         exerciseItem.textContent = exerciseInput;
         exerciseList.appendChild(exerciseItem);
       }
@@ -72,6 +84,9 @@ export default function WeeklyPlanner(props) {
 
   return (
     <div className="container">
+    {
+      console.log(exercises)
+    }
       <select id="daysDropdown">
         <option value="">Select a day</option>
       </select>

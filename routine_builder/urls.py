@@ -4,7 +4,7 @@ from users.views import RegisterAPI,LoginAPI
 from knox import views as knox_views
 from rest_framework.routers import DefaultRouter
 
-#Add extra url paths to DRF router API Root View
+# Add extra url paths to DRF router API Root View
 class RouterWithExtraItemsInRoot(DefaultRouter):
     extra_urls = {'register': 'register',
                   'login':'login',
@@ -22,7 +22,7 @@ class RouterWithExtraItemsInRoot(DefaultRouter):
         api_root_dict.update(self.extra_urls)  
         return self.APIRootView.as_view(api_root_dict=api_root_dict)
 
-#Viewset Router Regisration
+# Viewset Router Registration
 router = RouterWithExtraItemsInRoot()
 router.register (r'exercises', views.ExercisesViewSet)
 router.register (r'workouts', views.WorkoutViewSet)
@@ -31,7 +31,7 @@ router.extra_urls['url/path'] = 'view_name'
  
 urlpatterns = [
 
-#Non-routed url Paths
+# Non-Routed URL Paths
     path('register/', RegisterAPI.as_view(), name = 'register'),
     path('login/', LoginAPI.as_view(), name='login'),
     path('logout/', knox_views.LogoutView.as_view(), name='logout'),
